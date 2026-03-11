@@ -1,0 +1,59 @@
+name: ai_floating_assistant
+description: AI Floating Assistant - Overlay AI for Android
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ============ STATE MANAGEMENT ============
+  flutter_riverpod: ^2.5.1        # Manajemen state reaktif
+  riverpod_annotation: ^2.3.5
+
+  # ============ NETWORKING ============
+  dio: ^5.4.3                     # HTTP client yang powerful
+
+  # ============ ROUTING ============
+  go_router: ^13.2.0              # Navigasi declarative
+
+  # ============ OVERLAY / FLOATING WINDOW ============
+  flutter_overlay_window: ^0.4.4  # Floating bubble di atas app lain
+
+  # ============ OCR / TEXT RECOGNITION ============
+  google_mlkit_text_recognition: ^0.13.0  # OCR offline
+
+  # ============ SCREENSHOT ============
+  screenshot: ^3.0.0              # Capture widget sebagai gambar
+
+  # ============ PERMISSIONS ============
+  permission_handler: ^11.3.0     # Manajemen izin Android/iOS
+
+  # ============ VOICE ============
+  speech_to_text: ^7.3.0          # Konversi suara ke teks
+
+  # ============ MARKDOWN RENDERING ============
+  flutter_markdown: ^0.7.1        # Render jawaban AI dalam format Markdown
+
+  # ============ LOCAL DATABASE ============
+  hive: ^2.2.3                    # Database NoSQL ringan dan cepat
+  hive_flutter: ^1.1.0            # Integrasi Hive dengan Flutter
+
+  # ============ UTILITIES ============
+  uuid: ^4.3.3                    # Generate ID unik
+  path_provider: ^2.1.2           # Akses direktori sistem
+  image: ^4.1.7                   # Manipulasi gambar
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.8            # Code generation
+  riverpod_generator: ^2.3.11     # Generate Riverpod providers
+  hive_generator: ^2.0.1          # Generate Hive adapters
+
+flutter:
+  uses-material-design: true

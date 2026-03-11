@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background gelap sesuai tema aplikasi (#0A0A0A) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#0A0A0A"/>
+        </shape>
+    </item>
+
+    <!-- Lingkaran gradient biru di tengah sebagai preview icon -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/ic_launcher"/>
+    </item>
+</layer-list>
