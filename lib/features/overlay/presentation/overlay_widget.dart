@@ -82,7 +82,7 @@ class _FloatingBubbleWidgetState extends State<FloatingBubbleWidget>
       vsync: this,
       duration: const Duration(milliseconds: 2200),
     )..repeat();
-    _rippleScale = Tween<double>(begin: 1.0, end: 1.6).animate(
+    _rippleScale = Tween<double>(begin: 1.0, end: 1.2).animate(
       CurvedAnimation(parent: _rippleController, curve: Curves.easeOut),
     );
     _rippleOpacity = Tween<double>(begin: 0.45, end: 0.0).animate(
@@ -222,13 +222,13 @@ class _FloatingBubbleWidgetState extends State<FloatingBubbleWidget>
                 child: Opacity(
                   opacity: _rippleOpacity.value,
                   child: Container(
-                    width: AppConstants.bubbleSize - 8,
-                    height: AppConstants.bubbleSize - 8,
+                    width: AppConstants.bubbleSize - 12,
+                    height: AppConstants.bubbleSize - 12,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
                         color: AppTheme.primaryColor,
-                        width: 2.5,
+                        width: 2.0,
                       ),
                     ),
                   ),
@@ -247,8 +247,8 @@ class _FloatingBubbleWidgetState extends State<FloatingBubbleWidget>
                 ),
               ),
               child: Container(
-                width: AppConstants.bubbleSize - 8,
-                height: AppConstants.bubbleSize - 8,
+                width: AppConstants.bubbleSize - 12,
+                height: AppConstants.bubbleSize - 12,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   gradient: const LinearGradient(
@@ -261,14 +261,9 @@ class _FloatingBubbleWidgetState extends State<FloatingBubbleWidget>
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: AppTheme.primaryColor.withOpacity(0.55),
-                      blurRadius: 16,
-                      spreadRadius: 3,
-                    ),
-                    BoxShadow(
-                      color: AppTheme.accentColor.withOpacity(0.18),
-                      blurRadius: 28,
-                      spreadRadius: 6,
+                      color: AppTheme.primaryColor.withOpacity(0.4),
+                      blurRadius: 6,
+                      spreadRadius: 1,
                     ),
                   ],
                 ),
@@ -277,7 +272,7 @@ class _FloatingBubbleWidgetState extends State<FloatingBubbleWidget>
                   child: const Icon(
                     Icons.assistant_rounded,
                     color: Colors.white,
-                    size: 28,
+                    size: 26,
                   ),
                 ),
               ),
@@ -285,8 +280,8 @@ class _FloatingBubbleWidgetState extends State<FloatingBubbleWidget>
 
             // ── Titik indikator aktif (pojok kanan atas) ─────────
             Positioned(
-              top: 6,
-              right: 6,
+              top: 8,
+              right: 8,
               child: Container(
                 width: 10,
                 height: 10,
@@ -300,8 +295,8 @@ class _FloatingBubbleWidgetState extends State<FloatingBubbleWidget>
                   boxShadow: [
                     BoxShadow(
                       color: AppTheme.accentColor.withOpacity(0.7),
-                      blurRadius: 6,
-                      spreadRadius: 1,
+                      blurRadius: 4,
+                      spreadRadius: 0,
                     ),
                   ],
                 ),

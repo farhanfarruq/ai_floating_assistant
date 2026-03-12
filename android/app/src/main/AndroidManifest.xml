@@ -62,15 +62,11 @@
              - foregroundServiceType     → wajib untuk Android 14+ (API 34)
              - Jika targetSdk < 34, baris foregroundServiceType bisa dihapus
         -->
-        <service
-            android:name="com.lalongooo.flutter_overlay_window.OverlayService"
+<service
+            android:name="flutter.overlay.window.flutter_overlay_window.OverlayService"
             android:exported="false"
             android:foregroundServiceType="specialUse">
 
-            <!--
-                Properti wajib untuk foregroundServiceType="specialUse" di Android 14+.
-                Jelaskan alasan penggunaan foreground service kepada Google Play Store.
-            -->
             <property
                 android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="Floating AI assistant overlay displayed above other apps"/>

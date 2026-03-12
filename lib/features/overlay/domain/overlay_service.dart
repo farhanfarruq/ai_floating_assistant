@@ -71,7 +71,7 @@ class OverlayService {
         overlayContent: 'AI Floating Assistant aktif',
         flag: OverlayFlag.defaultFlag,
         visibility: NotificationVisibility.visibilityPublic,
-        positionGravity: PositionGravity.auto,
+        positionGravity: PositionGravity.none,
         width: AppConstants.bubbleSize.toInt(),
         height: AppConstants.bubbleSize.toInt(),
         startPosition: const OverlayPosition(0, 200),

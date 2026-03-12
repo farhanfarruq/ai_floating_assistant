@@ -17,7 +17,7 @@ void overlayMain() {
   WidgetsFlutterBinding.ensureInitialized();
   // Overlay berjalan di Flutter engine terpisah — TIDAK membuka Hive.
   // Config (API key dll) diterima via FlutterOverlayWindow.overlayListener stream.
-  runApp(const OverlayEntryWidget());
+  runApp(const ProviderScope(child: OverlayEntryWidget()));
 }
 
 Future<void> main() async {
